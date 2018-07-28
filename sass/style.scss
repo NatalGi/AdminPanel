@@ -1,7 +1,26 @@
 @import "variables";
 @import "mixins";
-//@import "normalize";
+@import "normalize";
 @import "layout";
-
 //components
-@import "components/sidebar"
+@import "components/sidebar";
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:link, &:visited {
+		color: $link-color;
+	}
+	
+	&:hover, &:active {
+		color: $link-hover-color;
+	}
+}
+
+.large-link {
+	
+	font-size: $link-font-size;
+	font-weight: $link-font-weight;
+}
+

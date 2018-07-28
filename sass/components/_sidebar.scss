@@ -135,7 +135,8 @@
 
 		.messenger-item {
 			display: flex;
-			cursor: pointer;
+			align-items: center;
+			//cursor: pointer;
 			/*padding: 8px 18px;
 
 			&:hover {
@@ -170,13 +171,13 @@
 				background-image: url("../images/manager-photo.jpg");
 			}
 
-			p {
+			a {
 				margin-left: 11px;
 				padding-top: 2px;
-				font-family: $messanger-font;
-				font-size: $messanger-font-size;
-				font-weight: $messanger-font-weight;
-				color: $messenger-text-color;
+				//font-family: $messanger-font;
+				//font-size: $messanger-font-size;
+				//font-weight: $messanger-font-weight;
+				//color: $messenger-text-color;
 			}
 		}
 	}

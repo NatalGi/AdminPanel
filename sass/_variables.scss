@@ -1,0 +1,68 @@
+/* colors */
+	//sidebar colors
+$sidebar-bg-color: #191919;
+$sidebar-text-color: #999999;
+$sidebar-active-bg-color: #282828;
+$sidebar-active-edge-color: #f58220;
+$sidebar-active-text-color: #ffffff;
+$sidebar-hr-color: #333333;
+
+$messenger-header-text-color: #808080;
+$messenger-text-color: #56819f;
+$messenger-avail-color: #04ae00;
+$messenger-not-avail-color: #ff0000;
+
+	//top bar colors
+$top-bar-bg-color: #ffffff;
+$top-bar-vr-color: #e3e3e3;
+$top-bar-sum-color: #9c9c9c;
+$top-bar-user-color: #56819f;
+
+	//page colors
+$page-header-color: #ababab;
+$page-bg-color: #ffffff;
+$page-hr-color: #808080;
+$body-bg-color: #f5f5f2;
+$section-header-color: #ababab;
+$simple-text-color: #333333;
+$link-color: #56819f;
+$link-hover-color: #ffa200;
+$button-color: #f58220;
+$button-hover-color: #ffa200;
+$button-disabled-color: #e3e3e3;
+
+/* font-sizes */
+$sidebar-menu-font-size: 11pt;//92%;
+$messanger-header-font-size: 93%; //11pt
+$messanger-font-size: 93%; //14pt
+$top-bar-sum-font-size: 167%; //20pt
+$top-bar-user-font-size: 108%; //13pt
+$page-header-font-size: 133%; //16pt
+$simple-text-font-size: 133%; //16pt
+$section-header-font-size: 133%; //16pt;
+$label-font-size: 117%; //14pt
+$button-font-size: 150%; //18pt
+
+/* fonts */
+$sidebar-menu-font: "Roboto", sans-serif;
+$messanger-header-font: "Roboto", sans-serif;
+$messanger-font: "Roboto", sans-serif;
+$top-bar-sum-font: "Roboto", sans-serif;
+$top-bar-user-font: "Roboto", sans-serif;
+$page-header-font: "Roboto", sans-serif;
+$simple-text-font: "Roboto", sans-serif;
+$section-header-font: "Roboto", sans-serif;
+$label-font: "Roboto", sans-serif;
+$button-font: "Roboto", sans-serif;
+
+/* font weight */
+$sidebar-menu-font-weight: 300; //Light
+$messanger-header-font-weight: 500; //Medium
+$messanger-font-weight: 300; //Light
+$top-bar-sum-font-weight: 400; //Regular
+$top-bar-user-font-weight: 300; //Light
+$page-header-font-weight: 500; //Medium
+$simple-text-font-weight: 300; //Light
+$section-header-font-weight: 700; //Bold
+$label-font-weight: 300; //Light
+$button-font-weight: 300; //Light

@@ -1,0 +1,183 @@
+.component--sidebar {
+	margin-left: 0;
+	width: 187px;
+	min-height: 100vh;
+	background-color: $sidebar-bg-color;
+	font-family: $sidebar-menu-font;
+	font-weight: $sidebar-menu-font-weight;
+	font-size: $sidebar-menu-font-size;
+	color: $sidebar-text-color;
+	overflow: hidden;
+
+	&.sidebar-hide {
+		transition: .5s;
+		margin-left: -141px;
+	}
+
+	&.sidebar-show {
+		transition: .5s;
+		margin-left: 0px;
+	}
+
+	.sidebar-icon {				
+		padding: 0;
+		fill: $sidebar-text-color;				
+	}	
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px 6px 14px 18px;
+
+		img {
+			display: block;
+		}
+
+		.icon-menu {
+			margin: 0;
+			height: 26px;
+			width: 26px;
+
+			&:hover, &:active {
+				fill: $sidebar-active-text-color;
+			}
+		}
+
+		button {
+			cursor: pointer;
+			border: 0;
+			background-color: rgba(0,0,0,0);
+			outline: none;
+		}
+	}	
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 12px;
+			width: 100%;
+
+			.icon-m {
+				margin: -3px 7px -3px 3px;
+				height: 18px;
+				width: 18px;
+			}
+
+			.icon-s {
+				margin: -2px 8px -2px 4px;
+				height: 16px;
+				width: 16px;
+			}	
+		}
+
+		a {
+			text-decoration: none;
+			color: $sidebar-text-color;
+			display: flex;
+			align-items: stretch;
+
+			&:link, &:visited {
+				color: $sidebar-text-color;
+			}
+
+			&:hover > li, &:active > li {
+				background-color: $sidebar-active-bg-color;
+				color: $sidebar-active-text-color;
+			}
+
+			&:hover .sidebar-icon, &:active .sidebar-icon {
+				fill: $sidebar-active-text-color;
+			}
+
+			&::before {
+				width: 5px;
+				content: " ";
+			}
+
+			&:hover, &:active {
+				&::before {
+					background-color: $sidebar-active-edge-color;
+				}
+			}
+		}
+		
+	}
+
+	hr {
+		color: $sidebar-hr-color;
+		background-color: $sidebar-hr-color;
+		margin-top: 32px;
+		margin-bottom: 27px;
+		border: 0;
+    	height: 0;
+    	border-top: 1px solid;
+    	border-bottom: 0;
+	}
+
+	.messenger {
+		padding: 0 18px;
+		
+		.messenger-header {
+			//padding: 0 18px;
+			font-family: $messanger-header-font;
+			font-size: $messanger-header-font-size;
+			font-weight: $messanger-header-font-weight;
+			color: $messenger-header-text-color;
+			text-transform: uppercase;
+			//margin-bottom: 7px;
+			margin-bottom: 12px;
+		}
+
+		.messenger-item {
+			display: flex;
+			cursor: pointer;
+			/*padding: 8px 18px;
+
+			&:hover {
+				background-color: $sidebar-active-bg-color;
+			}*/
+
+			.test {
+
+				&::before {
+					display: inline-block;
+					margin:0 0 0 31px;
+					width: 11px;
+					height: 11px;
+					border-radius: 50%;
+					background-color: $messenger-avail-color;
+					content: " ";
+				}
+			}
+
+			.manager-photo {
+				margin-top: -14px;
+				width: 43px;
+				height: 43px;
+				border-radius: 50%;
+				background-size: cover;
+				background-position: center;
+
+								
+			}
+
+			.manager-1 {
+				background-image: url("../images/manager-photo.jpg");
+			}
+
+			p {
+				margin-left: 11px;
+				padding-top: 2px;
+				font-family: $messanger-font;
+				font-size: $messanger-font-size;
+				font-weight: $messanger-font-weight;
+				color: $messenger-text-color;
+			}
+		}
+	}
+}

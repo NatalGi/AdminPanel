@@ -27,22 +27,15 @@ $section-header-color: #ababab;
 $simple-text-color: #333333;
 $link-color: #56819f;
 $link-hover-color: #ffa200;
-$button-color: #f58220;
-$button-hover-color: #ffa200;
+
+$button-text-color: #ffffff;
+$button-orange-color: #f58220;
+$button-orange-hover-color: #ffa200;
+$button-gray-color: #979797;
+$button-gray-hover-color: #ababab;
 $button-disabled-color: #e3e3e3;
 
-/* font-sizes */
-$sidebar-menu-font-size: 11pt;//92%;
-$messanger-header-font-size: 93%; //11pt
-$messanger-font-size: 93%; //14pt
-$top-bar-sum-font-size: 167%; //20pt
-$top-bar-user-font-size: 108%; //13pt
-$page-header-font-size: 133%; //16pt
-$simple-text-font-size: 133%; //16pt
-$section-header-font-size: 133%; //16pt;
-$label-font-size: 117%; //14pt
-$button-font-size: 150%; //18pt
-$link-font-size: 93%;
+$table-hover-color: #f5f5f2;
 
 /* fonts */
 $sidebar-menu-font: "Roboto", sans-serif;
@@ -55,6 +48,19 @@ $simple-text-font: "Roboto", sans-serif;
 $section-header-font: "Roboto", sans-serif;
 $label-font: "Roboto", sans-serif;
 $button-font: "Roboto", sans-serif;
+
+/* font-sizes */
+$sidebar-menu-font-size: 11pt;//92%;
+$messanger-header-font-size: 93%; //11pt
+$messanger-font-size: 93%; //14pt
+$top-bar-sum-font-size: 167%; //20pt
+$top-bar-user-font-size: 108%; //13pt
+$page-header-font-size: 133%; //16pt
+$simple-text-font-size: 133%; //16pt
+$section-header-font-size: 93%; //16pt;
+$label-font-size: 117%; //14pt
+$button-font-size: 120%; //18pt
+$link-font-size: 93%;
 
 /* font weight */
 $sidebar-menu-font-weight: 300; //Light

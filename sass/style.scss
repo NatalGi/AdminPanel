@@ -4,6 +4,16 @@
 @import "layout";
 //components
 @import "components/sidebar";
+@import "components/button";
+@import "components/table";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
 
 a {
 	color: $link-color;
@@ -24,3 +34,32 @@ a {
 	font-weight: $link-font-weight;
 }
 
+.page-container {
+	//display: flex;
+	width: 100%;
+}
+
+.main-section-container {
+	//display: flex;
+	//flex-direction: column;
+	//align-items: stretch;
+}
+
+.main-section {
+	//margin-left: 187px;
+	padding: 15px;
+	padding-left: 202px; //187px + 15px
+	width: 100%;
+
+	&.sidebar-hid {
+		transition: .5s;
+		//margin-left: 46px;
+		padding-left: 61px;
+	}
+
+	&.sidebar-showed {
+		transition: .5s;
+		//margin-left: 187px;
+		padding-left: 202px;
+	}
+}

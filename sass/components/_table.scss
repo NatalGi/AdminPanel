@@ -1,0 +1,48 @@
+.component--table {
+	
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+
+		tr {			
+
+			td {
+				padding: 13px;
+				font-size: $section-header-font-size;
+				font-weight: $section-header-font-weight;
+				color: $section-header-color;
+
+				img {
+					margin: 0 6px;
+					width: 13px;
+					height: 13px;
+				}
+			}
+
+			.align-right {
+				text-align: right;
+
+				 .auto-hiding {
+					visibility: hidden;
+				}				
+			}
+
+			&:hover, &:active {
+				background-color: $table-hover-color;
+			}
+
+			&:hover .align-right .auto-hiding, &:active .align-right  .auto-hiding {
+				visibility: visible;
+			}
+		}
+
+		.border-top {
+			border-top: 1px solid #ddd;
+		}
+
+		.border-bottom {
+			border-bottom: 1px solid #ddd;
+		}		
+	}
+}

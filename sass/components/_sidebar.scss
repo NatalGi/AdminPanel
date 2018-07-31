@@ -1,7 +1,9 @@
 .component--sidebar {
+	position: fixed;
+	float: left;
 	margin-left: 0;
 	width: 187px;
-	min-height: 100vh;
+	height: 100vh;
 	background-color: $sidebar-bg-color;
 	font-family: $sidebar-menu-font;
 	font-weight: $sidebar-menu-font-weight;
@@ -59,7 +61,7 @@
 
 		li {
 			margin: 0;
-			padding: 12px;
+			padding: 13px;
 			width: 100%;
 
 			.icon-m {

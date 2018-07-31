@@ -1,6 +1,6 @@
 /* colors */
-/* font-sizes */
 /* fonts */
+/* font-sizes */
 /* font weight */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -995,9 +995,11 @@ body {
 }
 
 .component--sidebar {
+  position: fixed;
+  float: left;
   margin-left: 0;
   width: 187px;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #191919;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -1060,7 +1062,7 @@ body {
 
 .component--sidebar ul li {
   margin: 0;
-  padding: 12px;
+  padding: 13px;
   width: 100%;
 }
 
@@ -1171,6 +1173,124 @@ body {
   padding-top: 2px;
 }
 
+.component--button button {
+  border: 0;
+  border-radius: 3px;
+  margin: 5px 0;
+  cursor: pointer;
+  height: 40px;
+  color: #ffffff;
+  font-size: 120%;
+  font-weight: 300;
+  outline: none;
+}
+
+.component--button .orange-btn {
+  background-color: #f58220;
+}
+
+.component--button .orange-btn:link, .component--button .orange-btn:visited {
+  background-color: #f58220;
+}
+
+.component--button .orange-btn:hover, .component--button .orange-btn:active {
+  background-color: #ffa200;
+}
+
+.component--button .gray-btn {
+  background-color: #979797;
+}
+
+.component--button .gray-btn:link, .component--button .gray-btn:visited {
+  background-color: #979797;
+}
+
+.component--button .gray-btn:hover, .component--button .gray-btn:active {
+  background-color: #ababab;
+}
+
+.component--button .disabled-btn {
+  background-color: #e3e3e3;
+  cursor: default;
+}
+
+.component--button .disabled-btn:link, .component--button .disabled-btn:visited {
+  background-color: #e3e3e3;
+}
+
+.component--button .disabled-btn:hover, .component--button .disabled-btn:active {
+  background-color: #e3e3e3;
+}
+
+.component--button .text-btn {
+  padding-left: 21px;
+  padding-right: 21px;
+  width: 100%;
+}
+
+.component--button .icon-btn {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.component--button .icon-btn svg {
+  margin: -1px;
+  padding: 1px 0 0 0;
+  height: 18px;
+  width: 18px;
+  fill: #ffffff;
+}
+
+.component--table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.component--table table tr td {
+  padding: 13px;
+  font-size: 93%;
+  font-weight: 700;
+  color: #ababab;
+}
+
+.component--table table tr td img {
+  margin: 0 6px;
+  width: 13px;
+  height: 13px;
+}
+
+.component--table table tr .align-right {
+  text-align: right;
+}
+
+.component--table table tr .align-right .auto-hiding {
+  visibility: hidden;
+}
+
+.component--table table tr:hover, .component--table table tr:active {
+  background-color: #f5f5f2;
+}
+
+.component--table table tr:hover .align-right .auto-hiding, .component--table table tr:active .align-right .auto-hiding {
+  visibility: visible;
+}
+
+.component--table table .border-top {
+  border-top: 1px solid #ddd;
+}
+
+.component--table table .border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 a {
   color: #56819f;
   text-decoration: none;
@@ -1187,5 +1307,25 @@ a:hover, a:active {
 .large-link {
   font-size: 93%;
   font-weight: 300;
+}
+
+.page-container {
+  width: 100%;
+}
+
+.main-section {
+  padding: 15px;
+  padding-left: 202px;
+  width: 100%;
+}
+
+.main-section.sidebar-hid {
+  transition: .5s;
+  padding-left: 61px;
+}
+
+.main-section.sidebar-showed {
+  transition: .5s;
+  padding-left: 202px;
 }
 /*# sourceMappingURL=style.css.map */

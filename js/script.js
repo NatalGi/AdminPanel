@@ -17,17 +17,25 @@
 function sidebarToggle() {
     var sidebarElement = document.getElementById('sidebar');
     var margin = sidebarElement.style.marginLeft;
+    var mainPageSection = document.getElementById('main-section');
+
     //console.log('margin: ' + margin);
     //console.log(sidebarElement.classList); 
-    if(!margin || margin == '0px') {
+    if(!margin || margin == '0px') { //Hide sidebar
         sidebarElement.classList.add('sidebar-hide');
         sidebarElement.classList.remove('sidebar-show');
-        sidebarElement.style.marginLeft = '-141px'; //sidebarElement.setAttribute('style', 'margin-left: -141px');        
+        sidebarElement.style.marginLeft = '-141px'; //sidebarElement.setAttribute('style', 'margin-left: -141px');    
+        sidebarElement.style.overflow = 'hidden';   
+        mainPageSection.classList.add('sidebar-hid');
+        mainPageSection.style.paddingLeft = '61px';
     }
-    else {
+    else { //Show sidebar
         sidebarElement.classList.remove('sidebar-hide');
         sidebarElement.classList.add('sidebar-show');
         sidebarElement.style.marginLeft = '0'; //sidebarElement.setAttribute('style', 'margin-left: 0');
+        sidebarElement.style.overflow = 'auto';
+        mainPageSection.classList.add('sidebar-showed');
+        mainPageSection.style.paddingLeft = '202px';
     } 
 }
 

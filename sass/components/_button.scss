@@ -1,0 +1,71 @@
+.component--button {
+
+	button {
+		border: 0;
+		border-radius: 3px;
+		margin: 5px 0;
+		cursor: pointer;
+		height: 40px;
+		//width: 100%;
+		color: $button-text-color;
+		font-size: $button-font-size;
+		font-weight: $button-font-weight;
+		outline: none;
+	}
+
+	.orange-btn {
+		background-color: $button-orange-color;
+
+		&:link, &:visited {
+			background-color: $button-orange-color;
+		}
+
+		&:hover, &:active {
+			background-color: $button-orange-hover-color;
+		}
+	}
+
+	.gray-btn {
+		background-color: $button-gray-color;
+
+		&:link, &:visited {
+			background-color: $button-gray-color;
+		}
+
+		&:hover, &:active {
+			background-color: $button-gray-hover-color;
+		}
+	}
+
+	.disabled-btn {
+		background-color: $button-disabled-color;
+		cursor: default;
+
+		&:link, &:visited {
+			background-color: $button-disabled-color;
+		}
+
+		&:hover, &:active {
+			background-color: $button-disabled-color;
+		}
+	}
+
+	.text-btn {
+		padding-left: 21px;
+		padding-right: 21px;
+		width: 100%;
+	}	
+
+	.icon-btn {
+		padding-left: 13px;
+		padding-right: 13px;
+
+		svg {		
+			margin: -1px;
+			padding: 1px 0 0 0;
+			height: 18px;
+			width: 18px;
+			fill: $button-text-color;
+		}
+	}
+}

@@ -23,7 +23,14 @@
 
 	.sidebar-icon {				
 		padding: 0;
-		fill: $sidebar-text-color;				
+		fill: $sidebar-text-color;	
+		color-fill: $sidebar-text-color;	
+
+		svg {
+			padding: 0;
+		fill: $sidebar-text-color;	
+		color-fill: $sidebar-text-color;	
+		}			
 	}	
 
 	.header {

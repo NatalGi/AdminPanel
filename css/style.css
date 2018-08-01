@@ -1021,6 +1021,13 @@ body {
 .component--sidebar .sidebar-icon {
   padding: 0;
   fill: #999999;
+  color-fill: #999999;
+}
+
+.component--sidebar .sidebar-icon svg {
+  padding: 0;
+  fill: #999999;
+  color-fill: #999999;
 }
 
 .component--sidebar .header {
@@ -1259,6 +1266,12 @@ body {
   height: 13px;
 }
 
+.component--table table tr td .table-icon {
+  margin: 0 6px;
+  width: 13px;
+  height: 13px;
+}
+
 .component--table table tr .align-right {
   text-align: right;
 }
@@ -1298,10 +1311,12 @@ a {
 
 a:link, a:visited {
   color: #56819f;
+  fill: #56819f;
 }
 
 a:hover, a:active {
   color: #ffa200;
+  fill: #ffa200;
 }
 
 .large-link {

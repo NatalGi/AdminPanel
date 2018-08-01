@@ -21,10 +21,12 @@ a {
 
 	&:link, &:visited {
 		color: $link-color;
+		fill: $link-color;
 	}
 	
 	&:hover, &:active {
 		color: $link-hover-color;
+		fill: $link-hover-color;
 	}
 }
 

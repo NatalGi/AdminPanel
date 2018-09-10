@@ -1,0 +1,38 @@
+@mixin grid($prefix) {
+	@for $i from 1 through 12 {
+		.col-#{$prefix}-#{$i} {
+			$width: 100% / 12 * $i;
+			width: $width;
+			max-width: $width;
+			float: left;
+			min-height: 1px;
+			/*text-align: center;*/
+			position: relative;
+			//@if $i != 1 and $i != 12 {
+				padding-left: 17px;
+			//}
+			
+			//@if $i != 12 {
+				padding-right: 17px;
+			//}			
+		}
+	}
+}
+
+@mixin grid-offset($prefix) {
+	@for $i from 1 through 12 {
+		.offset-#{$prefix}-#{$i} {
+			margin-left: 100% / 12 * $i;
+		}
+	}
+}
+
+@mixin margins($prefix, $value) {
+	.margin-top-#{$prefix} {
+		margin-top: #{$value};
+	}
+
+	.margin-bottom-#{$prefix} {
+		margin-bottom: #{$value};
+	}
+}

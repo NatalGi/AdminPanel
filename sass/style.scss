@@ -1,11 +1,26 @@
 @import "variables";
 @import "mixins";
-@import "normalize";
+//@import "normalize";
 @import "layout";
+@import "icons";
 //components
 @import "components/sidebar";
+@import "components/select";
+@import "components/topbar";
 @import "components/button";
 @import "components/table";
+@import "components/dateRangePicker";
+@import "components/chart";
+
+//sections
+@import "sections/pattern";
+@import "sections/general";
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 * {
 	box-sizing: border-box;
@@ -13,6 +28,7 @@
 
 body {
 	font-family: "Roboto", sans-serif;
+	background-color: $body-bg-color;
 }
 
 a {
@@ -30,10 +46,20 @@ a {
 	}
 }
 
-.large-link {
-	
+h6 {
+	font-size: $section-header-font-size;
+	font-weight: $section-header-font-weight;
+	color: $section-header-color;
+}
+
+.large-link {	
 	font-size: $link-font-size;
 	font-weight: $link-font-weight;
+}
+
+.small-link {
+	font-size: $small-link-font-size;
+	font-weight: $small-link-font-weight;
 }
 
 .page-container {
@@ -49,19 +75,31 @@ a {
 
 .main-section {
 	//margin-left: 187px;
-	padding: 15px;
-	padding-left: 202px; //187px + 15px
+	//padding: 15px;
+	padding-left: 187px; //187px + 15px = 202px
 	width: 100%;
 
 	&.sidebar-hid {
 		transition: .5s;
 		//margin-left: 46px;
-		padding-left: 61px;
+		padding-left: 46px;
 	}
 
 	&.sidebar-showed {
 		transition: .5s;
 		//margin-left: 187px;
-		padding-left: 202px;
+		padding-left: 187px;
 	}
+}
+
+.bg {
+	background-color: gray;
+}
+
+.bg2 {
+	background-color: orange;
+}
+
+.bg-trans {
+	background-color: rgba(25,26,45,.5);
 }

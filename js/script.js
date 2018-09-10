@@ -2,100 +2,58 @@
  * Replace all SVG images with inline SVG
  */
 
- /*
-        <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript">
-            inlineSVG.init({
-              svgSelector: 'sidebar-icon', // the class attached to all images that should be inlined
-              initClass: 'icon-gen', // class added to <html>
-            }, function () {
-              console.log('All SVGs inlined');
-            });
-        </script>
- */
+"use strict";
 
-function sidebarToggle() {
-    var sidebarElement = document.getElementById('sidebar');
-    var margin = sidebarElement.style.marginLeft;
-    var mainPageSection = document.getElementById('main-section');
+(function() {
 
-    //console.log('margin: ' + margin);
-    //console.log(sidebarElement.classList); 
-    if(!margin || margin == '0px') { //Hide sidebar
-        sidebarElement.classList.add('sidebar-hide');
-        sidebarElement.classList.remove('sidebar-show');
-        sidebarElement.style.marginLeft = '-141px'; //sidebarElement.setAttribute('style', 'margin-left: -141px');    
-        sidebarElement.style.overflow = 'hidden';   
-        mainPageSection.classList.add('sidebar-hid');
-        mainPageSection.style.paddingLeft = '61px';
-    }
-    else { //Show sidebar
-        sidebarElement.classList.remove('sidebar-hide');
-        sidebarElement.classList.add('sidebar-show');
-        sidebarElement.style.marginLeft = '0'; //sidebarElement.setAttribute('style', 'margin-left: 0');
-        sidebarElement.style.overflow = 'auto';
-        mainPageSection.classList.add('sidebar-showed');
-        mainPageSection.style.paddingLeft = '202px';
-    } 
-}
+    document.getElementById('sidebar-toggle-btn').addEventListener('click', function() {
+        var sidebarElement = document.getElementById('sidebar');
+        var margin = sidebarElement.style.marginLeft;
+        var mainPageSection = document.getElementById('main-section');
 
-
-
-
-/*            (function ()  {
-    document.querySelectorAll('.sidebar-icon').forEach(function(img){
-        var testElement = document.getElementById('test');
-        //testElement.insertAdjacentHTML('afterbegin','DZIAŁA !!!!!!');
-
-
-        var imgID = img.id;
-        var imgClass = img.className;
-        var imgURL = img.src;
-        var mess = 'Mess: ';
-
-
-        //testElement.insertAdjacentHTML('afterbegin','id: ' + imgID + ', class: ' + imgClass + ', src: ' + imgURL + '<br>');
-  
-        fetch(imgURL).then(function(response) {
-            return response.text();
-        }).then(function(text){
-
-            testElement.insertAdjacentHTML('afterbegin', 'I am here');
-
-            var parser = new DOMParser();
-            var xmlDoc = parser.parseFromString(text, "text/xml");
-
-            // Get the SVG tag, ignore the rest
-            var svg = xmlDoc.getElementsByTagName('svg')[0];
-
-            // Add replaced image's ID to the new SVG
-            if(typeof imgID !== 'undefined') {
-                svg.setAttribute('id', imgID);
-            }
-            // Add replaced image's classes to the new SVG
-            if(typeof imgClass !== 'undefined') {
-                svg.setAttribute('class', imgClass);//+' replaced-svg');
-            }
-
-            // Remove any invalid XML tags as per http://validator.w3.org
-            svg.removeAttribute('xmlns:a');
-
-            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-            if(!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
-                svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
-            }
-
-            //svg.setAttribute('class', 'sidebar-icon');
-            //mess += 'class: ' + svg.getAttribute('class') + '<br>';
-            mess = "Biaaaatch";
-
-            // Replace image with new SVG
-            img.parentNode.replaceChild(svg, img);
-
-        });
-        testElement.insertAdjacentHTML('afterbegin', mess);
+        //console.log('margin: ' + margin);
+        //console.log(sidebarElement.classList); 
+        if(!margin || margin == '0px') { //Hide sidebar
+            sidebarElement.classList.add('sidebar-hide');
+            sidebarElement.classList.remove('sidebar-show');
+            sidebarElement.style.marginLeft = '-141px'; //sidebarElement.setAttribute('style', 'margin-left: -141px');    
+            sidebarElement.style.overflow = 'hidden';   
+            mainPageSection.classList.add('sidebar-hid');
+            mainPageSection.style.paddingLeft = '46px';
+        }
+        else { //Show sidebar
+            sidebarElement.classList.remove('sidebar-hide');
+            sidebarElement.classList.add('sidebar-show');
+            sidebarElement.style.marginLeft = '0'; //sidebarElement.setAttribute('style', 'margin-left: 0');
+            sidebarElement.style.overflow = 'auto';
+            mainPageSection.classList.add('sidebar-showed');
+            mainPageSection.style.paddingLeft = '187px';
+        } 
     });
 
-    
-}) ();*/
+    $(function() {
+        $('#component-select-1 .select').click(function() {
+            $('#component-select-1 .option-list').addClass('transition');
+            $('#component-select-1 .option-list').toggleClass('expand');
+        });
+
+        $(window).resize(function() {
+            $('#component-select-1 .option-list').removeClass('transition');
+        });
+
+        $('#component-select-1 .option-list .option').click(function(event) {
+            $('#component-select-1 .choosen-option').html($(event.target).html());
+        });
+    })
+
+    /*document.getElementById('component--select .select').addEventListener('click', function() {
+        document.getElementById('option-list').classList.toggle('show');
+    });*/
+})();
+
+
+
+
+
+
     

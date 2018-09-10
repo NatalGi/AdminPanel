@@ -1,0 +1,48 @@
+[class*="section--"] {
+	margin: 18px;
+	//padding-bottom: 45px;
+	background-color: $page-bg-color;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+	header {
+		padding: 18px;
+		//margin-bottom: 35px;
+		border-bottom: 1px solid $page-hr-color;
+		text-align: left;
+		text-transform: uppercase;
+		color: $page-header-color;
+		font-size: $page-header-font-size;
+		font-weight: $page-header-font-weight;
+	}
+
+	.content {
+		width: 100%;
+		//padding: 18px;
+
+		@media (min-width: 768px) {
+			.left-padding {			
+				padding-left: 30px;
+			}
+
+			.right-padding {
+				padding-right: 30px;
+			}
+		}
+	}
+
+	hr {
+		border: 0;
+		margin: 0;
+		color: $page-hr-color;
+		background-color: $page-hr-color;
+		height: 1px;
+	}
+
+	&.paddings {
+		padding: 20px;
+	}
+
+	@include margins('l', 45px);
+	@include margins('m', 35px);
+	@include margins('s', 25px);
+}

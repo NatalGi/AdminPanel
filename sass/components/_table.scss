@@ -1,37 +1,26 @@
 .component--table {
-	
 
-	table {
-		width: 100%;
-		border-collapse: collapse;
-
-		tr {			
-
+	&.table-1 {
+		table tr {
 			td {
-				padding: 13px;
-				font-size: $section-header-font-size;
-				font-weight: $section-header-font-weight;
-				color: $section-header-color;
+				padding: 13px 15px;
 
-				img {
-					margin: 0 6px;
-					width: 13px;
-					height: 13px;
+				&.col-left {
+					width: 40%;
+				}
+
+				&.col-right {
+					width: 40%;
 				}
 
 				.table-icon {
-					margin: 0 6px;
-					width: 13px;
-					height: 13px;
+					text-align: center;
+					margin: 0 12px;
 				}
 			}
 
-			.align-right {
-				text-align: right;
-
-				 .auto-hiding {
-					visibility: hidden;
-				}				
+			.auto-hiding {
+				visibility: hidden;
 			}
 
 			&:hover, &:active {
@@ -41,6 +30,38 @@
 			&:hover .align-right .auto-hiding, &:active .align-right  .auto-hiding {
 				visibility: visible;
 			}
+		}
+	}
+
+	&.table-2 {
+		table tr td {
+			padding: 20px 0 6px 0;
+		}
+	}
+	
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+
+		tr {
+
+			td {				
+				font-size: $section-header-font-size;
+				font-weight: $section-header-font-weight;
+				color: $section-header-color;				
+			}
+
+			.align-right {
+				text-align: right;								
+			}
+
+			.numbers {
+				text-align: right;
+				color: $simple-text-color;
+				font-size: $simple-text-font-size;
+				font-weight: $simple-text-font-weight;
+			}			
 		}
 
 		.border-top {

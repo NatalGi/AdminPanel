@@ -3,7 +3,7 @@
 	button {
 		border: 0;
 		border-radius: 3px;
-		margin: 5px 0;
+		//margin: 0 10px;
 		cursor: pointer;
 		height: 40px;
 		//width: 100%;
@@ -50,6 +50,7 @@
 		}
 	}
 
+
 	.text-btn {
 		padding-left: 21px;
 		padding-right: 21px;
@@ -57,15 +58,9 @@
 	}	
 
 	.icon-btn {
-		padding-left: 13px;
-		padding-right: 13px;
-
-		svg {		
-			margin: -1px;
-			padding: 1px 0 0 0;
-			height: 18px;
-			width: 18px;
-			fill: $button-text-color;
-		}
+		display: inline-block;
+		float: right;
+		width: 40px;
+		font-size: 100%;
 	}
 }

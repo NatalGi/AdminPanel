@@ -21,18 +21,6 @@
 		margin-left: 0px;
 	}
 
-	.sidebar-icon {				
-		padding: 0;
-		fill: $sidebar-text-color;	
-		color-fill: $sidebar-text-color;	
-
-		svg {
-			padding: 0;
-		fill: $sidebar-text-color;	
-		color-fill: $sidebar-text-color;	
-		}			
-	}	
-
 	.header {
 		display: flex;
 		justify-content: space-between;
@@ -45,11 +33,11 @@
 
 		.icon-menu {
 			margin: 0;
-			height: 26px;
-			width: 26px;
+			font-size: 28px;
+			color: $sidebar-text-color;
 
 			&:hover, &:active {
-				fill: $sidebar-active-text-color;
+				color: $sidebar-active-text-color;
 			}
 		}
 
@@ -71,17 +59,17 @@
 			padding: 13px;
 			width: 100%;
 
-			.icon-m {
-				margin: -3px 7px -3px 3px;
-				height: 18px;
-				width: 18px;
+			.icon-l {
+				margin: -3px 5px -3px 3px;
 			}
 
 			.icon-s {
 				margin: -2px 8px -2px 4px;
-				height: 16px;
-				width: 16px;
-			}	
+			}
+
+			.icon-xs {
+				margin: -2px 13px -2px 3px;
+			}
 		}
 
 		a {
@@ -103,12 +91,22 @@
 				fill: $sidebar-active-text-color;
 			}
 
+			&:hover, &:active {
+				&::before {
+					background-color: $sidebar-active-bg-color;
+				}
+			}
+
 			&::before {
 				width: 5px;
 				content: " ";
 			}
 
-			&:hover, &:active {
+			&.active {
+				li {
+					background-color: $sidebar-active-bg-color;
+				}
+
 				&::before {
 					background-color: $sidebar-active-edge-color;
 				}

@@ -5,30 +5,33 @@
 "use strict";
 
 (function() {
-
-    document.getElementById('sidebar-toggle-btn').addEventListener('click', function() {
-        var sidebarElement = document.getElementById('sidebar');
-        var margin = sidebarElement.style.marginLeft;
-        var mainPageSection = document.getElementById('main-section');
+        $('#sidebar-toggle-btn').click(function() {
+        var sidebarElement = $('#sidebar');
+        var margin = sidebarElement.css('margin-left');
+        var mainPageSection = $('#main-section');
 
         //console.log('margin: ' + margin);
-        //console.log(sidebarElement.classList); 
+        //console.log(sidebarElement.classList);
         if(!margin || margin == '0px') { //Hide sidebar
-            sidebarElement.classList.add('sidebar-hide');
-            sidebarElement.classList.remove('sidebar-show');
-            sidebarElement.style.marginLeft = '-141px'; //sidebarElement.setAttribute('style', 'margin-left: -141px');    
-            sidebarElement.style.overflow = 'hidden';   
-            mainPageSection.classList.add('sidebar-hid');
-            mainPageSection.style.paddingLeft = '46px';
+            sidebarElement.addClass('sidebar-hide');
+            sidebarElement.removeClass('sidebar-show');
+            sidebarElement.css({
+              marginLeft: '-141px',
+              overflow: 'hidden'
+            });
+            mainPageSection.addClass('sidebar-hid');
+            mainPageSection.css('padding-left', '46px');
         }
         else { //Show sidebar
-            sidebarElement.classList.remove('sidebar-hide');
-            sidebarElement.classList.add('sidebar-show');
-            sidebarElement.style.marginLeft = '0'; //sidebarElement.setAttribute('style', 'margin-left: 0');
-            sidebarElement.style.overflow = 'auto';
-            mainPageSection.classList.add('sidebar-showed');
-            mainPageSection.style.paddingLeft = '187px';
-        } 
+            sidebarElement.removeClass('sidebar-hide');
+            sidebarElement.addClass('sidebar-show');
+            sidebarElement.css({
+              marginLeft: '0px',
+              overflow: 'auto'
+            });
+            mainPageSection.addClass('sidebar-showed');
+            mainPageSection.css('padding-left', '187px');
+        }
     });
 
     $(function() {
@@ -50,10 +53,3 @@
         document.getElementById('option-list').classList.toggle('show');
     });*/
 })();
-
-
-
-
-
-
-    

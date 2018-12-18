@@ -24,12 +24,40 @@
 		flex: 0 1 auto;
 		border-right: 1px solid $page-hr-color;
 		height: 30px;
-		margin: 0 15px 0 10px;
+		margin-right: 10px;
 	}
 
 	#cal-icon {
 		flex: 0 1 auto;
-		margin-left: 10px;
+		//margin-left: 10px;
 		color: $icon-gray-color;
+	}
+
+	@media(max-width: 478px) {
+		.input {
+			height: 80px;
+			line-height: 40px;
+		}
+
+		.line {
+			display: none;
+		}
+
+		#from-date {
+			border-bottom: 1px solid $page-hr-color;
+		}
+
+		#to-date {
+			order: 1;
+		}
+
+		.flex-container-space {
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+
+		.flex-hr-stretch {
+			flex: 0 1 80%;
+		}
 	}
 }

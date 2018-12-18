@@ -45,6 +45,11 @@ body {
 	flex-wrap: nowrap;
 }
 
+.flex-container-space {
+	@extend .flex-container;
+	justify-content: space-between;
+}
+
 .flex-hr-stretch {
 	flex: 0 1 50%;
 }
@@ -68,8 +73,7 @@ body {
 	@include grid-offset('lg');
 }
 
-@meda (min-width: 1024px) {
+@media (min-width: 1024px) {
 	@include grid('xl');
 	@include grid-offset('xl');
 }
-

@@ -35,7 +35,7 @@ body {
   clear: both;
 }
 
-.flex-container {
+.flex-container, .flex-container-space {
   margin: 0;
   padding: 0;
   display: -ms-flexbox;
@@ -46,6 +46,11 @@ body {
       justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+.flex-container-space {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .flex-hr-stretch {
@@ -534,7 +539,7 @@ body {
   }
 }
 
-@meda (min-width: 1024px) {
+@media (min-width: 1024px) {
   .col-xl-1 {
     width: 8.33333%;
     max-width: 8.33333%;
@@ -1350,14 +1355,40 @@ body {
       flex: 0 1 auto;
   border-right: 1px solid #e3e3e3;
   height: 30px;
-  margin: 0 15px 0 10px;
+  margin-right: 10px;
 }
 
 .component--date-range-picker #cal-icon {
   -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-  margin-left: 10px;
   color: #9c9c9c;
+}
+
+@media (max-width: 478px) {
+  .component--date-range-picker .input {
+    height: 80px;
+    line-height: 40px;
+  }
+  .component--date-range-picker .line {
+    display: none;
+  }
+  .component--date-range-picker #from-date {
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .component--date-range-picker #to-date {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .component--date-range-picker .flex-container-space {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .component--date-range-picker .flex-hr-stretch {
+    -ms-flex: 0 1 80%;
+        flex: 0 1 80%;
+  }
 }
 
 .component--chart .chart-container {

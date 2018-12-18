@@ -39,7 +39,7 @@ a {
 		color: $link-color;
 		fill: $link-color;
 	}
-	
+
 	&:hover, &:active {
 		color: $link-hover-color;
 		fill: $link-hover-color;
@@ -52,7 +52,7 @@ h6 {
 	color: $section-header-color;
 }
 
-.large-link {	
+.large-link {
 	font-size: $link-font-size;
 	font-weight: $link-font-weight;
 }

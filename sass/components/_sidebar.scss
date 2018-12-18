@@ -1,5 +1,6 @@
 .component--sidebar {
 	position: fixed;
+	z-index: 1;
 	float: left;
 	margin-left: 0;
 	width: 187px;
@@ -47,7 +48,7 @@
 			background-color: rgba(0,0,0,0);
 			outline: none;
 		}
-	}	
+	}
 
 	ul {
 		margin: 0;
@@ -112,7 +113,7 @@
 				}
 			}
 		}
-		
+
 	}
 
 	hr {
@@ -128,7 +129,7 @@
 
 	.messenger {
 		padding: 0 18px;
-		
+
 		.messenger-header {
 			//padding: 0 18px;
 			font-family: $messanger-header-font;
@@ -171,7 +172,7 @@
 				background-size: cover;
 				background-position: center;
 
-								
+
 			}
 
 			.manager-1 {

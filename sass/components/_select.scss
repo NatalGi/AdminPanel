@@ -1,4 +1,4 @@
-.component--select {	
+.component--select {
 
 	.select {
 		position: relative;
@@ -12,7 +12,6 @@
 		text-align: left;
 		color: $placeholder-color;
 		font-size: $simple-text-font-size;
-		line-height: 38px;
 		cursor: pointer;
 
 		.option {
@@ -21,32 +20,14 @@
 
 		.select-icon {
 			float: right;
-			line-height: 38px;
 			margin: 0 13px;
-		}
 
-		&.topbar-select {
-			border: 0;
-			height: 60px;
-			width: 170px;
-
-			.option {
-				font-size: $topbar-sum-font-size;
-				font-weight: $topbar-sum-font-weight;
-				color: $topbar-font-color;
-			}
-
-			.option-list {
-				margin: 0;
-
-				.option {
-					min-height: 50px;
-					line-height: 50px;
-				}
+			&.topbar {
+				line-height: 38px;
 			}
 		}
 
-		.topbar-select-flex-container {
+		.select-flex-container {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -70,7 +51,7 @@
 
 		&.transition {
 			transition: transform .3s;
-		}						
+		}
 
 		&.expand {
 			transform: scaleY(1);
@@ -81,7 +62,8 @@
 			padding: 0 13px;
 			border: 1px solid $line-color;
 			border-top: 0;
-			min-height: 30px;
+			min-height: 35px;
+			line-height: 35px;
 			color: $gray-5-color;
 			background-color: $topbar-bg-active-color;
 			cursor: pointer;

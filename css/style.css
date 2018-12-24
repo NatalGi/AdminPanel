@@ -877,10 +877,12 @@ body {
 }
 
 .component--sidebar {
+  top: 0;
   position: fixed;
   z-index: 1;
   float: left;
   margin-left: 0;
+  padding-bottom: 30px;
   width: 187px;
   height: 100vh;
   background-color: #191919;
@@ -888,7 +890,7 @@ body {
   font-weight: 300;
   font-size: 11pt;
   color: #999999;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .component--sidebar.sidebar-hide {
@@ -932,31 +934,37 @@ body {
   outline: none;
 }
 
-.component--sidebar ul {
+.component--sidebar .nav {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.component--sidebar ul li {
+.component--sidebar .nav .nav-item {
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   padding: 13px;
   width: 100%;
 }
 
-.component--sidebar ul li .icon-l {
-  margin: -3px 5px -3px 3px;
+.component--sidebar .nav .nav-item .icon-l {
+  margin: 0 8px -3px 3px;
 }
 
-.component--sidebar ul li .icon-s {
-  margin: -2px 8px -2px 4px;
+.component--sidebar .nav .nav-item .icon-m {
+  margin: 0 9px -3px 3px;
 }
 
-.component--sidebar ul li .icon-xs {
-  margin: -2px 13px -2px 3px;
+.component--sidebar .nav .nav-item .icon-s {
+  margin: 0 11px -2px 4px;
 }
 
-.component--sidebar ul a {
+.component--sidebar .nav .nav-item .icon-xs {
+  margin: 0 16px -2px 3px;
+}
+
+.component--sidebar .nav a {
   text-decoration: none;
   color: #999999;
   display: -ms-flexbox;
@@ -965,33 +973,33 @@ body {
       align-items: stretch;
 }
 
-.component--sidebar ul a:link, .component--sidebar ul a:visited {
+.component--sidebar .nav a:link, .component--sidebar .nav a:visited {
   color: #999999;
 }
 
-.component--sidebar ul a:hover > li, .component--sidebar ul a:active > li {
+.component--sidebar .nav a:hover > li, .component--sidebar .nav a:active > li {
   background-color: #282828;
   color: #ffffff;
 }
 
-.component--sidebar ul a:hover .sidebar-icon, .component--sidebar ul a:active .sidebar-icon {
+.component--sidebar .nav a:hover .sidebar-icon, .component--sidebar .nav a:active .sidebar-icon {
   fill: #ffffff;
 }
 
-.component--sidebar ul a:hover::before, .component--sidebar ul a:active::before {
+.component--sidebar .nav a:hover::before, .component--sidebar .nav a:active::before {
   background-color: #282828;
 }
 
-.component--sidebar ul a::before {
+.component--sidebar .nav a::before {
   width: 5px;
   content: " ";
 }
 
-.component--sidebar ul a.active li {
+.component--sidebar .nav a.active li {
   background-color: #282828;
 }
 
-.component--sidebar ul a.active::before {
+.component--sidebar .nav a.active::before {
   background-color: #f58220;
 }
 
@@ -1059,6 +1067,44 @@ body {
   padding-top: 2px;
 }
 
+.component--sidebar .component--select {
+  position: relative;
+}
+
+.component--sidebar .component--select .select {
+  border: 0;
+  font-size: inherit;
+  height: auto;
+}
+
+.component--sidebar .component--select .select .option {
+  margin: 0;
+}
+
+.component--sidebar .component--select .select .option-list .option:hover {
+  background-color: green;
+}
+
+.component--sidebar .component--select .option-list {
+  width: calc(100% + 5px);
+  left: -5px;
+  top: 44px;
+}
+
+.component--sidebar .component--select .option-list .option {
+  border: 0;
+  border-bottom: 1px solid #999999;
+  padding: 5px 18px;
+  background-color: #333333;
+  color: #999999;
+}
+
+@media (min-width: 560px) {
+  .component--sidebar #sidebar-topbar-section {
+    display: none;
+  }
+}
+
 .component--select .select {
   position: relative;
   width: 100%;
@@ -1071,7 +1117,6 @@ body {
   text-align: left;
   color: #a6a6a6;
   font-size: 90%;
-  line-height: 38px;
   cursor: pointer;
 }
 
@@ -1081,32 +1126,14 @@ body {
 
 .component--select .select .select-icon {
   float: right;
-  line-height: 38px;
   margin: 0 13px;
 }
 
-.component--select .select.topbar-select {
-  border: 0;
-  height: 60px;
-  width: 170px;
+.component--select .select .select-icon.topbar {
+  line-height: 38px;
 }
 
-.component--select .select.topbar-select .option {
-  font-size: 118%;
-  font-weight: 500;
-  color: #9c9c9c;
-}
-
-.component--select .select.topbar-select .option-list {
-  margin: 0;
-}
-
-.component--select .select.topbar-select .option-list .option {
-  min-height: 50px;
-  line-height: 50px;
-}
-
-.component--select .select .topbar-select-flex-container {
+.component--select .select .select-flex-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1144,7 +1171,8 @@ body {
   padding: 0 13px;
   border: 1px solid #e3e3e3;
   border-top: 0;
-  min-height: 30px;
+  min-height: 35px;
+  line-height: 35px;
   color: #333333;
   background-color: #f5f5f2;
   cursor: pointer;
@@ -1196,12 +1224,32 @@ body {
   background-color: #f5f5f2;
 }
 
-.component--topbar select {
+.component--topbar .component--select .select {
   border: 0;
-  padding: 0 30px 0 10px;
-  color: #9c9c9c;
+  height: 60px;
+  width: 170px;
+  line-height: 38px;
+}
+
+.component--topbar .component--select .select .option {
   font-size: 118%;
   font-weight: 500;
+  color: #9c9c9c;
+}
+
+.component--topbar .component--select .select .option-list {
+  margin: 0;
+}
+
+.component--topbar .component--select .select .option-list .option {
+  min-height: 50px;
+  line-height: 50px;
+}
+
+@media (max-width: 559.9px) {
+  .component--topbar {
+    display: none;
+  }
 }
 
 .component--button button {

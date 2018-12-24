@@ -1,8 +1,10 @@
 .component--sidebar {
+	top: 0;
 	position: fixed;
 	z-index: 1;
 	float: left;
 	margin-left: 0;
+	padding-bottom: 30px;
 	width: 187px;
 	height: 100vh;
 	background-color: $sidebar-bg-color;
@@ -10,7 +12,7 @@
 	font-weight: $sidebar-menu-font-weight;
 	font-size: $sidebar-menu-font-size;
 	color: $sidebar-text-color;
-	overflow: hidden;
+	overflow: auto;
 
 	&.sidebar-hide {
 		transition: .5s;
@@ -50,26 +52,31 @@
 		}
 	}
 
-	ul {
+	.nav {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 
-		li {
+		.nav-item {
+			display: flex;
 			margin: 0;
 			padding: 13px;
 			width: 100%;
 
 			.icon-l {
-				margin: -3px 5px -3px 3px;
+				margin: 0 8px -3px 3px;
+			}
+
+			.icon-m {
+				margin: 0 9px -3px 3px;
 			}
 
 			.icon-s {
-				margin: -2px 8px -2px 4px;
+				margin: 0 11px -2px 4px;
 			}
 
 			.icon-xs {
-				margin: -2px 13px -2px 3px;
+				margin: 0 16px -2px 3px;
 			}
 		}
 
@@ -187,6 +194,46 @@
 				//font-weight: $messanger-font-weight;
 				//color: $messenger-text-color;
 			}
+		}
+	}
+
+	.component--select {
+		position: relative;
+
+		.select {
+			border: 0;
+			font-size: inherit;
+			height: auto;
+
+			.option {
+				margin: 0;
+			}
+
+			.option-list .option {
+				&:hover {
+					background-color: green;
+				}
+			}
+		}
+
+		.option-list {
+			width: calc(100% + 5px);
+			left: -5px;
+			top: 44px;
+
+			.option {
+				border: 0;
+				border-bottom: 1px solid $sidebar-text-color;
+				padding: 5px 18px;
+				background-color: $gray-5-color;
+				color: $sidebar-text-color;
+			}
+		}
+	}
+
+	@media(min-width: 560px) {
+		#sidebar-topbar-section {
+			display: none;
 		}
 	}
 }

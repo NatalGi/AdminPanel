@@ -37,12 +37,31 @@
 		}
 	}
 
-	select {
-		border: 0;
-		padding: 0 30px 0 10px;
-		color: $topbar-font-color;
-		font-size: $topbar-sum-font-size;
-		font-weight: $topbar-sum-font-weight;
+	.component--select {
+		.select {
+			border: 0;
+			height: 60px;
+			width: 170px;
+			line-height: 38px;
 
+			.option {
+				font-size: $topbar-sum-font-size;
+				font-weight: $topbar-sum-font-weight;
+				color: $topbar-font-color;
+			}
+
+			.option-list {
+				margin: 0;
+
+				.option {
+					min-height: 50px;
+					line-height: 50px;
+				}
+			}
+		}
+	}
+
+	@media(max-width: 559.9px) {
+		display: none;
 	}
 }

@@ -4,7 +4,7 @@
 
 "use strict";
 
-(function() {
+$(function() {
   var sidebarElement = $('#sidebar');
   var mainPageSection = $('#main-section');
   var windowWidth = $(window).width();
@@ -58,26 +58,70 @@
     }
   });
 
-  $(function() {
-    $('#component-select-1 .select').click(function() {
-      $('#component-select-1 .option-list').addClass('transition');
-      $('#component-select-1 .option-list').toggleClass('expand');
+  $('.component--select').each(function(i, element) {
+    const parentId = '#' + $(element).attr('id');
+    $(parentId + ' .select').click(function() {
+      $(parentId + ' .option-list').addClass('transition');
+      $(parentId + ' .option-list').toggleClass('expand');
     });
 
-    $(window).resize(function() {
-      $('#component-select-1 .option-list').removeClass('transition');
-      windowWidth = $(window).width();
-      if(windowWidth < 560) {
-        hideSidebar();
+    $(parentId + ' .option-list .option').click(function(event) {
+      $(parentId + ' .choosen-option').html($(event.target).html());
+      if(parentId === '#component-select-topbar') {
+        $('#component-select-sidebar .choosen-option').html($(event.target).html());
+      } else if(parentId === '#component-select-sidebar') {
+        $('#component-select-sidebar .option-list').toggleClass('expand');
+        $('#component-select-topbar .choosen-option').html($(event.target).html());
       }
     });
+  });
 
-    $('#component-select-1 .option-list .option').click(function(event) {
-      $('#component-select-1 .choosen-option').html($(event.target).html());
+  $(window).resize(function() {
+    /*$('#component-select-1 .option-list').removeClass('transition');
+    $('#component-select-sidebar .option-list').removeClass('transition');*/
+
+    $('.component--select').each(function(i, element) {
+      const parentId = '#' + $(element).attr('id');
+      $(parentId + ' .option-list').removeClass('transition');
     });
-  })
+
+    hideSidebar();
+    windowWidth = $(window).width();
+    if(windowWidth > 900) {
+      showSidebar();
+    }
+  });
+
+  // Serve a select element option choosing
+/*  $('#component-select-1 .option-list .option').click(function(event) {
+    $('#component-select-sidebar .choosen-option').html($(event.target).html());
+    $('#component-select-topbar .choosen-option').html($(event.target).html());
+  });
+
+  $('#component-select-sidebar .option-list .option').click(function(event) {
+    $('#component-select-sidebar .choosen-option').html($(event.target).html());
+    $('#component-select-topbar .choosen-option').html($(event.target).html());
+    $('#component-select-sidebar .option-list').toggleClass('expand');
+  });*/
+
+  /*$('.component--select').each(function(i, element) {
+    const parentId = '#' + $(element).attr('id');
+    $(parentId + ' .option-list .option').click(function(event) {
+      $(parentId + ' .option-list .option').html($(event.target).html());
+    });
+  });*/
+
+  // Remove showing of select elements options in case of click outside of them
+  $('body').click(function(event) {
+    $('.component--select').each(function(i, element) {
+      if(!$(event.target).closest($(element)).length) {
+        const parentId = '#' + $(element).attr('id');
+        $(parentId + ' .option-list').removeClass('expand');
+      }
+    });
+  });
 
     /*document.getElementById('component--select .select').addEventListener('click', function() {
         document.getElementById('option-list').classList.toggle('show');
     });*/
-})();
+});

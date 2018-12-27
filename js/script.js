@@ -92,6 +92,14 @@ $(function() {
     }
   });
 
+  $('.daterangepicker').mouseover(function() {
+    $('#reportrange').addClass('hovered');
+  });
+
+  $('.daterangepicker').mouseout(function() {
+    $('#reportrange').removeClass('hovered');
+  });
+
   // Serve a select element option choosing
 /*  $('#component-select-1 .option-list .option').click(function(event) {
     $('#component-select-sidebar .choosen-option').html($(event.target).html());

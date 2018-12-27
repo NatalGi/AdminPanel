@@ -4,6 +4,7 @@
 		table tr {
 			td {
 				padding: 13px 15px;
+				cursor: pointer;
 
 				&.col-left {
 					width: 40%;
@@ -70,6 +71,16 @@
 
 		.border-bottom {
 			border-bottom: 1px solid #ddd;
+		}
+
+		/*.table-row:hover .links-icon {
+			color: $link-hover-color;
+		}*/
+
+		.links-icon {
+			&.hovered {
+				color: $link-hover-color;
+			}
 		}
 	}
 }

@@ -58,7 +58,12 @@ body {
 	text-align: left;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 450px) {
+	@include grid('xs');
+	@include grid-offset('xs');
+}
+
+@media (min-width: 450.1px) and (max-width: 767px) {
 	@include grid('sm');
 	@include grid-offset('sm');
 }
@@ -76,4 +81,9 @@ body {
 @media (min-width: 1024px) {
 	@include grid('xl');
 	@include grid-offset('xl');
+}
+
+@media (min-width: 1220px) {
+	@include grid('xxl');
+	@include grid-offset('xxl');
 }

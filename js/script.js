@@ -92,32 +92,15 @@ $(function() {
     }
   });
 
-  $('.daterangepicker').mouseover(function() {
+  // Service of daterange picker hover state
+  $('.daterangepicker').mouseenter(function() {
     $('#reportrange').addClass('hovered');
   });
 
-  $('.daterangepicker').mouseout(function() {
+  $('.daterangepicker').mouseleave(function() {
     $('#reportrange').removeClass('hovered');
   });
 
-  // Serve a select element option choosing
-/*  $('#component-select-1 .option-list .option').click(function(event) {
-    $('#component-select-sidebar .choosen-option').html($(event.target).html());
-    $('#component-select-topbar .choosen-option').html($(event.target).html());
-  });
-
-  $('#component-select-sidebar .option-list .option').click(function(event) {
-    $('#component-select-sidebar .choosen-option').html($(event.target).html());
-    $('#component-select-topbar .choosen-option').html($(event.target).html());
-    $('#component-select-sidebar .option-list').toggleClass('expand');
-  });*/
-
-  /*$('.component--select').each(function(i, element) {
-    const parentId = '#' + $(element).attr('id');
-    $(parentId + ' .option-list .option').click(function(event) {
-      $(parentId + ' .option-list .option').html($(event.target).html());
-    });
-  });*/
 
   // Remove showing of select elements options in case of click outside of them
   $('body').click(function(event) {
@@ -129,7 +112,30 @@ $(function() {
     });
   });
 
-    /*document.getElementById('component--select .select').addEventListener('click', function() {
-        document.getElementById('option-list').classList.toggle('show');
-    });*/
+  // If table row has :hover set :hover to 'links-icon' element
+  $('.component--table.table-1 .table-row').mouseenter(function() {
+    $(this).find('.links-icon').addClass('hovered');
+  });
+
+  $('.component--table.table-1 .table-row').mouseleave(function() {
+    $(this).find('.links-icon').removeClass('hovered');
+  });
+
+  // If row is clicked, his 'links-icon' link is open
+  $('.component--table.table-1 .table-row').click(function() {
+    window.location = $(this).find('.links-icon').first().attr("href");
+  });
+
+  // On mouseenter to 'a' element in a row, remove 'links-icon' :hover
+  $('.component--table.table-1 .table-row a').mouseenter(function() {
+    if($(this).hasClass('links-icon')) {
+      return;
+    } else {
+      $(this).parent().parent().find('.links-icon').removeClass('hovered');
+    }
+  });
+
+  $('.component--table.table-1 .table-row a').mouseleave(function() {
+    $(this).parent().parent().find('.links-icon').addClass('hovered');
+  });
 });

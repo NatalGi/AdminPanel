@@ -6,58 +6,62 @@
 		<title>Testing page</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" media="all" href="vendor/daterangepicker.css"/>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+		<script type="text/javascript" src="vendor/daterangepicker.js"></script>
 	</head>
 	<body>
-
 		<div class="page-container">
 			<section class="sidebar-section">
 				<div id="sidebar" class="component--sidebar">
 					<div class="header">
 						<img src="images/logo.png">
 						<button id="sidebar-toggle-btn">
-							<div class="sidebar-icon icon icon-hamburger icon-menu"></div>
+							<span class="sidebar-icon icon icon-hamburger icon-menu"></span>
 						</button>
 					</div>
 					<nav>
-						<ul>
-							<a href="#">
-								<li>
+						<ul class="nav">
+							<a href="./index.html" class="active">
+								<li class="nav-item">
 									<div class="icon icon-general icon-l"></div>
 									General
 								</li>
 							</a>
 							<a href="#">
-								<li>
+								<li class="nav-item">
 									<div class="icon icon-details icon-s"></div>
 									Details
 								</li>
 							</a>
-							<a href="#">
-								<li>
+							<a href="./pages/links.html">
+								<li class="nav-item">
 									<div class="icon icon-links icon-xs"></div>
 									Links
 								</li>
 							</a>
 							<a href="#">
-								<li>
+								<li class="nav-item">
 									<div class="icon icon-banners icon-s"></div>
 									Banners
 								</li>
 							</a>
 							<a href="#">
-								<li>
+								<li class="nav-item">
 									<div class="icon icon-personaldata icon-s"></div>
 									Personal data
 								</li>
 							</a>
 							<a href="#">
-								<li>
+								<li class="nav-item">
 									<div class="icon icon-payout icon-s"></div>
 									Payout
 								</li>
 							</a>
 							<a href="#">
-								<li>
+								<li class="nav-item">
 									<div class="icon icon-postback icon-s"></div>
 									Postback
 								</li>
@@ -74,29 +78,104 @@
 							<a class="large-link" href="#">Mikhael E.</a>
 						</div>
 					</div>
+
+					<div id="sidebar-topbar-section" class="topbar-section">
+						<hr>
+						<nav>
+							<ul class="nav">
+								<a href="#">
+									<li id="component-select-sidebar" class="nav-item component--select">
+										<div class="select">
+											<div class="select-flex-container">
+												<span id="choosen-option" class="choosen-option option right-margin"><i class="icon icon-wallet right-margin icon-m"></i>$1,500.00</span>
+												<span class="select-icon icon icon-arrow-down-small icon-xxs"></span>
+											</div>
+										</div>
+										<div>
+											<ul class="option-list">
+												<li class="option sidebar"><i class="icon icon-wallet right-margin icon-m"></i>$1,500.00</li>
+												<li class="option sidebar"><i class="icon icon-wallet right-margin icon-m"></i>$2,000.00</li>
+												<li class="option sidebar"><i class="icon icon-wallet right-margin icon-m"></i>$2,500.00</li>
+												<li class="option sidebar"><i class="icon icon-wallet right-margin icon-m"></i>$3,000.00</li>
+											</ul>
+										</div>
+									</li>
+								</a>
+								<a href="#">
+									<li class="nav-item">
+										<div class="icon icon-notification icon-m"></div>
+										Notifications
+									</li>
+								</a>
+								<a href="#">
+									<li class="nav-item">
+										<div class="icon icon-profile icon-m"></div>
+										Leonardo Dicaprio
+									</li>
+								</a>
+								<a href="#">
+									<li class="nav-item">
+										<div class="icon icon-quit icon-s"></div>
+										Logout
+									</li>
+								</a>
+							</ul>
+						<!--<div class="component--topbar">
+							<div class="topbar-section">
+								<div id="component-select-1" class="component--select">
+									<div class="select topbar-select">
+										<div class="topbar-select-flex-container">
+											<span id="choosen-option" class="choosen-option option right-margin"><i class="icon icon-wallet right-margin icon-m"></i>$1,500.00</span>
+											<span class="select-icon icon icon-arrow-down-small icon-xxs"></span>
+										</div>
+
+										<div>
+											<ul id="option-list" class="option-list">
+												<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$1,500.00</li>
+												<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$2,000.00</li>
+												<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$2,500.00</li>
+												<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$3,000.00</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<a class="topbar-section" href="#">
+								<div class="icon icon-notification icon-m topbar-element"></div>
+							</a>
+							<div class="topbar-section">
+								<div class="topbar-element">
+									<div class="icon icon-m icon-profile right-margin"></div>
+									<a class="small-link" href="#">Leonardo Dicaprio</a>
+								</div>
+							</div>
+							<a class="topbar-section" href="#">
+								<div class="icon icon-quit icon-s topbar-element"></div>
+							</a>
+						</div>-->
+					</div>
 				</div>
 			</section>
-
-			<section id="main-section" class="main-section">
-				<div class="component--topbar">
+			<div id="page-topbar" class="component--topbar">
 				<div class="topbar-section">
-					<div id="component-select-1" class="component--select">
-						<div class="select topbar-select">
-							<div class="topbar-select-flex-container">								
+					<div id="component-select-topbar" class="component--select">
+						<div class="select">
+							<div class="select-flex-container">
 								<span id="choosen-option" class="choosen-option option right-margin"><i class="icon icon-wallet right-margin icon-m"></i>$1,500.00</span>
 								<span class="select-icon icon icon-arrow-down-small icon-xxs"></span>
 							</div>
 
 							<div>
-								<ul id="option-list" class="option-list">
+								<ul class="option-list">
 									<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$1,500.00</li>
 									<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$2,000.00</li>
 									<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$2,500.00</li>
 									<li class="option"><i class="icon icon-wallet right-margin icon-m"></i>$3,000.00</li>
 								</ul>
 							</div>
-							
-						</div>				
+
+						</div>
 					</div>
 				</div>
 				<a class="topbar-section" href="#">
@@ -112,7 +191,9 @@
 					<div class="icon icon-quit icon-s topbar-element"></div>
 				</a>
 			</div>
+		</div>
 
+		<div id="main-section" class="main-section">
 			<section class="section--blank paddings">
 				<h1>Buttons</h1>
 				<div class="component--button">
@@ -124,13 +205,50 @@
 					</button>
 				</div>
 
-				<h1>Table 1</h1>
+				<h1 class="margin-top-m">Date range picker</h1>
+				<div class="flex-container">
+					<span class="component--date-range-picker">
+						<div id="reportrange" class="input flex-container-space">
+							<span id="from-date" class="flex-hr-stretch"></span>
+							<span class="line"></span>
+							<span id="to-date" class="flex-hr-stretch"></span>
+							<span id="cal-icon"><i class="icon icon-calendar"></i></span>
+						</div>
+					</span>
+					<span class="component--button">
+						<button class="icon-btn orange-btn">
+							<div class="icon icon-refresh"></div>
+						</button>
+					</span>
+				</div>
+
+				<h1 class="margin-top-m">Select</h1>
+				<div id="component-select-temp" class="component--select">
+					<div class="select">
+						<div class="select-flex-container">
+							<span id="choosen-option" class="choosen-option option right-margin">Choose opition</span>
+							<span class="select-icon icon icon-arrow-down-small icon-xxs"></span>
+						</div>
+
+						<div>
+							<ul id="option-list-temp" class="option-list">
+								<li class="option">Option one</li>
+								<li class="option">Option two</li>
+								<li class="option">Option three</li>
+								<li class="option">Option four</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<h1 class="margin-top-m">Table 1</h1>
 				<div class="component--table table-1">
 					<table>
 						<tr class="border-top">
-							<td class="col-left">Home page</td>
-							<td class="col-right"><a class="large-link" href="#">http://www.homepage.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Home page</td>
+							<td class="col-second"><a class="large-link" href="#">www.homepage.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -140,9 +258,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Currently offer</td>
-							<td><a class="large-link" href="#">http://www.currently.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Currently offer</td>
+							<td class="col-second"><a class="large-link" href="#">www.currently.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -152,9 +270,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Bluprix</td>
-							<td><a class="large-link" href="#">http://www.bluprix.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Bluprix</td>
+							<td class="col-second"><a class="large-link" href="#">www.bluprix.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -164,9 +282,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Your site</td>
-							<td><a class="large-link" href="#">http://www.yoursite.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Your site</td>
+							<td class="col-second"><a class="large-link" href="#">www.yoursite.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -176,9 +294,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Google</td>
-							<td><a class="large-link" href="#">http://www.google.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Google</td>
+							<td class="col-second"><a class="large-link" href="#">www.google.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -188,9 +306,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Facebook</td>
-							<td><a class="large-link" href="#">http://www.facebook.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Facebook</td>
+							<td class="col-second"><a class="large-link" href="#">www.facebook.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -200,9 +318,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Dashboard</td>
-							<td><a class="large-link" href="#">http://www.dashboard.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Dashboard</td>
+							<td class="col-second"><a class="large-link" href="#">www.dashboard.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -212,9 +330,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Blurax</td>
-							<td><a class="large-link" href="#">http://www.blurax.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Blurax</td>
+							<td class="col-second"><a class="large-link" href="#">www.blurax.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -224,9 +342,9 @@
 							</td>
 						</tr>
 						<tr class="border-top">
-							<td>Piece of Wine</td>
-							<td><a class="large-link" href="#">http://www.pieceofwine.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Piece of Wine</td>
+							<td class="col-second"><a class="large-link" href="#">www.pieceofwine.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -236,9 +354,9 @@
 							</td>
 						</tr>
 						<tr class="border-top border-bottom">
-							<td>Twitter</td>
-							<td><a class="large-link" href="#">http://www.twitter.com</a></td>
-							<td class="align-right">
+							<td class="col-first">Twitter</td>
+							<td class="col-second"><a class="large-link" href="#">www.twitter.com</a></td>
+							<td class="col-third align-right">
 								<a class="large-link auto-hiding" href="#">
 									<i class="icon icon-xs table-icon icon-links"></i>
 								</a>
@@ -250,8 +368,8 @@
 					</table>
 				</div>
 
-				<h1>Table 2</h1>
-				<div class="component--table table-2">
+				<h1 class="margin-top-m">Table 2</h1>
+				<div class="component--table table-2 margin-bottom-m">
 					<table>
 						<tr class="border-bottom">
 							<td>Visit Signups</td>
@@ -262,16 +380,11 @@
 							<td class="align-right">445</td>
 						</tr>
 					</table>
-				</div>
-
-				<h1>Date range picker</h1>
-				<div class="component--date-range-picker">
-					
-				</div>
+				</div>				
 			</section>
-
 		</div>
 
+		<script type="text/javascript" src="vendor/configuration.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>

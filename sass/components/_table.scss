@@ -6,17 +6,18 @@
 				padding: 13px 15px;
 				cursor: pointer;
 
-				&.col-left {
+				&.col-first {
 					width: 40%;
 				}
 
-				&.col-right {
+				&.col-second {
 					width: 40%;
 				}
 
 				.table-icon {
+					width: inherit;
 					text-align: center;
-					margin: 0 12px;
+					margin: 5px 6px;
 				}
 			}
 
@@ -30,6 +31,38 @@
 
 			&:hover .align-right .auto-hiding, &:active .align-right  .auto-hiding {
 				visibility: visible;
+			}
+		}
+
+		@media(max-width: 768px) {
+			table tr {
+				.auto-hiding {
+					visibility: visible;
+				}
+			}
+		}
+
+		@media(max-width: 560px) {
+			table tr {
+				td {
+					display: block;
+					padding: 2px 15px;
+					word-break: break-all;
+
+					&.col-first {
+						padding-top: 11px;
+						width: 100%;
+					}
+
+					&.col-second {
+						width: 100%;
+					}
+
+					&.col-third {
+						padding-bottom: 11px;
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

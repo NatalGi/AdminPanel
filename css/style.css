@@ -1637,22 +1637,33 @@ body {
   font-size: 100%;
 }
 
+@media (max-width: 768px) {
+  .component--button button {
+    height: 30px;
+  }
+  .component--button .text-btn {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .component--table.table-1 table tr td {
   padding: 13px 15px;
   cursor: pointer;
 }
 
-.component--table.table-1 table tr td.col-left {
+.component--table.table-1 table tr td.col-first {
   width: 40%;
 }
 
-.component--table.table-1 table tr td.col-right {
+.component--table.table-1 table tr td.col-second {
   width: 40%;
 }
 
 .component--table.table-1 table tr td .table-icon {
+  width: inherit;
   text-align: center;
-  margin: 0 12px;
+  margin: 5px 6px;
 }
 
 .component--table.table-1 table tr .auto-hiding {
@@ -1665,6 +1676,31 @@ body {
 
 .component--table.table-1 table tr:hover .align-right .auto-hiding, .component--table.table-1 table tr:active .align-right .auto-hiding {
   visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .component--table.table-1 table tr .auto-hiding {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 560px) {
+  .component--table.table-1 table tr td {
+    display: block;
+    padding: 2px 15px;
+    word-break: break-all;
+  }
+  .component--table.table-1 table tr td.col-first {
+    padding-top: 11px;
+    width: 100%;
+  }
+  .component--table.table-1 table tr td.col-second {
+    width: 100%;
+  }
+  .component--table.table-1 table tr td.col-third {
+    padding-bottom: 11px;
+    width: 100%;
+  }
 }
 
 .component--table.table-2 table tr td {

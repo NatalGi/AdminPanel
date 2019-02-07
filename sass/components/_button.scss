@@ -63,4 +63,14 @@
 		width: 40px;
 		font-size: 100%;
 	}
+
+	@media(max-width: 768px) {
+		button {
+			height: 30px;
+		}
+		.text-btn {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
 }

@@ -69,8 +69,9 @@
 		.nav-item {
 			display: flex;
 			margin: 0;
-			padding: 13px;
 			width: 100%;
+			display: flex;
+			align-items: stretch;
 
 			.icon-l {
 				margin: 0 8px -3px 3px;
@@ -87,41 +88,41 @@
 			.icon-xs {
 				margin: 5px 16px -2px 3px;
 			}
-		}
 
-		a {
-			text-decoration: none;
-			color: $sidebar-text-color;
-			display: flex;
-			align-items: stretch;
+			.nav-link {
+				flex: 0 1 100%;
+				align-self: stretch;
+				text-decoration: none;
+				color: $sidebar-text-color;
+				padding: 13px;
+			}
 
 			&:link, &:visited {
 				color: $sidebar-text-color;
 			}
 
-			&:hover > li, &:active > li {
-				background-color: $sidebar-active-bg-color;
-				color: $sidebar-active-text-color;
+			&::before {
+				z-index: 5;
+				width: 5px;
+				align-self: stretch;
+				content: " ";
 			}
 
-			&:hover .sidebar-icon, &:active .sidebar-icon {
-				fill: $sidebar-active-text-color;
-			}
+			&:hover , &:active {
+				.nav-link {
+					color: $sidebar-active-text-color;
+					background-color: $sidebar-active-bg-color;
+				}
 
-			&:hover, &:active {
 				&::before {
 					background-color: $sidebar-active-bg-color;
 				}
 			}
 
-			&::before {
-				width: 5px;
-				content: " ";
-			}
-
 			&.active {
-				li {
+				.nav-link {
 					background-color: $sidebar-active-bg-color;
+					color: $sidebar-active-text-color;
 				}
 
 				&::before {
@@ -129,7 +130,6 @@
 				}
 			}
 		}
-
 	}
 
 	hr {

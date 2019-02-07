@@ -38,8 +38,6 @@ $(function() {
     mainPageSection.css('padding-left', '46px');
   }
 
-  //if(windowWidth)
-
   $('#sidebar-toggle-btn').click(function() {
     var margin = sidebarElement.css('margin-left');
     windowWidth = $(window).width();

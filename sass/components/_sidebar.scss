@@ -4,6 +4,7 @@
 	z-index: 1000;
 	float: left;
 	margin-left: 0;
+	opacity: 1;
 	padding-bottom: 30px;
 	width: 187px;
 	height: 100vh;
@@ -12,16 +13,24 @@
 	font-weight: $sidebar-menu-font-weight;
 	font-size: $sidebar-menu-font-size;
 	color: $sidebar-text-color;
-	overflow: auto;
+	overflow: sroll;
 
 	&.sidebar-hide {
 		transition: .5s;
 		margin-left: -141px;
+
+		.nav, .messenger, .topbar-section, hr {
+			display: none;
+		}
 	}
 
 	&.sidebar-show {
 		transition: .5s;
 		margin-left: 0px;
+
+		.nav, .messenger, .topbar-section, hr {
+			display: inherit;
+		}
 	}
 
 	.header {
@@ -76,7 +85,7 @@
 			}
 
 			.icon-xs {
-				margin: 0 16px -2px 3px;
+				margin: 5px 16px -2px 3px;
 			}
 		}
 

@@ -1208,7 +1208,7 @@ body {
   font-weight: 300;
   font-size: 11pt;
   color: #999999;
-  overflow: auto;
+  overflow: sroll;
 }
 
 .component--sidebar.sidebar-hide {
@@ -1216,9 +1216,17 @@ body {
   margin-left: -141px;
 }
 
+.component--sidebar.sidebar-hide .nav, .component--sidebar.sidebar-hide .messenger, .component--sidebar.sidebar-hide .topbar-section {
+  display: none;
+}
+
 .component--sidebar.sidebar-show {
   transition: .5s;
   margin-left: 0px;
+}
+
+.component--sidebar.sidebar-show .nav, .component--sidebar.sidebar-show .messenger, .component--sidebar.sidebar-show .topbar-section {
+  display: inherit;
 }
 
 .component--sidebar .header {
@@ -1279,7 +1287,7 @@ body {
 }
 
 .component--sidebar .nav .nav-item .icon-xs {
-  margin: 0 16px -2px 3px;
+  margin: 5px 16px -2px 3px;
 }
 
 .component--sidebar .nav a {

@@ -1,5 +1,5 @@
-mkdir build/js
+mkdir docs/js
 for file in js/*
 do 
-    uglifyjs "$file" -o build/"$file"
+    uglifyjs "$file" -o docs/"$file"
 done

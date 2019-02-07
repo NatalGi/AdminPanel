@@ -1,4 +1,6 @@
 .component--topbar {
+	position: fixed;
+	z-index: 500;
 	display: flex;
 	justify-content: flex-end;
 	border-bottom: 1px solid $line-color;

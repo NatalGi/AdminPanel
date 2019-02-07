@@ -29,6 +29,8 @@ ul {
 body {
 	font-family: "Roboto", sans-serif;
 	background-color: $body-bg-color;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -76,6 +78,7 @@ h6 {
 .main-section {
 	//margin-left: 187px;
 	//padding: 15px;
+	padding-top: 60px;
 	padding-left: 187px; //187px + 15px = 202px
 	width: 100%;
 
@@ -89,6 +92,10 @@ h6 {
 		transition: .5s;
 		//margin-left: 187px;
 		padding-left: 187px;
+	}
+
+	@media(max-width: 559.9px) {
+		padding-top: 0;
 	}
 }
 

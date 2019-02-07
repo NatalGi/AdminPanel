@@ -1197,7 +1197,7 @@ body {
 .component--sidebar {
   top: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   float: left;
   margin-left: 0;
   padding-bottom: 30px;
@@ -1505,6 +1505,8 @@ body {
 }
 
 .component--topbar {
+  position: fixed;
+  z-index: 500;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
@@ -1858,6 +1860,8 @@ ul {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f5f5f2;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -1896,6 +1900,7 @@ h6 {
 }
 
 .main-section {
+  padding-top: 60px;
   padding-left: 187px;
   width: 100%;
 }
@@ -1908,6 +1913,12 @@ h6 {
 .main-section.sidebar-showed {
   transition: .5s;
   padding-left: 187px;
+}
+
+@media (max-width: 559.9px) {
+  .main-section {
+    padding-top: 0;
+  }
 }
 
 .bg {

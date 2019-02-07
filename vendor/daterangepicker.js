@@ -98,7 +98,7 @@
         //html template for the picker UI
         if (typeof options.template !== 'string' && !(options.template instanceof $))
             options.template =
-            '<div class="daterangepicker">' +
+            '<div id="daterangepicker" class="daterangepicker">' +
                 '<div class="ranges"></div>' +
                 '<div class="drp-calendar left">' +
                     '<div class="calendar-table"></div>' +
@@ -1100,6 +1100,7 @@
             this.move();
             this.element.trigger('show.daterangepicker', this);
             this.isShowing = true;
+            $('#reportrange').addClass('hovered');
         },
 
         hide: function(e) {
@@ -1123,6 +1124,7 @@
             this.container.hide();
             this.element.trigger('hide.daterangepicker', this);
             this.isShowing = false;
+            $('#reportrange').removeClass('hovered');
         },
 
         toggle: function(e) {

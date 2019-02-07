@@ -92,16 +92,6 @@ $(function() {
     }
   });
 
-  // Service of daterange picker hover state
-  $('.daterangepicker').mouseenter(function() {
-    $('#reportrange').addClass('hovered');
-  });
-
-  $('.daterangepicker').mouseleave(function() {
-    $('#reportrange').removeClass('hovered');
-  });
-
-
   // Remove showing of select elements options in case of click outside of them
   $('body').click(function(event) {
     $('.component--select').each(function(i, element) {

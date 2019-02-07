@@ -1200,6 +1200,7 @@ body {
   z-index: 1000;
   float: left;
   margin-left: 0;
+  opacity: 1;
   padding-bottom: 30px;
   width: 187px;
   height: 100vh;
@@ -1216,7 +1217,7 @@ body {
   margin-left: -141px;
 }
 
-.component--sidebar.sidebar-hide .nav, .component--sidebar.sidebar-hide .messenger, .component--sidebar.sidebar-hide .topbar-section {
+.component--sidebar.sidebar-hide .nav, .component--sidebar.sidebar-hide .messenger, .component--sidebar.sidebar-hide .topbar-section, .component--sidebar.sidebar-hide hr {
   display: none;
 }
 
@@ -1225,7 +1226,7 @@ body {
   margin-left: 0px;
 }
 
-.component--sidebar.sidebar-show .nav, .component--sidebar.sidebar-show .messenger, .component--sidebar.sidebar-show .topbar-section {
+.component--sidebar.sidebar-show .nav, .component--sidebar.sidebar-show .messenger, .component--sidebar.sidebar-show .topbar-section, .component--sidebar.sidebar-show hr {
   display: inherit;
 }
 
